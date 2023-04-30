@@ -1,0 +1,6 @@
+export { default as User } from './user.model'
+export { default as Message } from './message.model'
+export { default as Gig } from './gig.model'
+export { default as Conversation } from './conversation.model'
+export { default as Review } from './review.model'
+export { default as Order } from './order.model'

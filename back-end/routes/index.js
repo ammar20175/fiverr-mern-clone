@@ -1,0 +1,7 @@
+export { default as userRouter } from './user.route'
+export { default as conversationRouter } from './conversation.route'
+export { default as reviewRouter } from './review.route'
+export { default as orderRouter } from './order.route'
+export { default as gigRouter } from './gig.route'
+export { default as messageRouter } from './message.route'
+export { default as authRouter } from './auth.route'
