@@ -11,6 +11,9 @@ import Message from './pages/message/Message'
 import MyGigs from './pages/myGigs/MyGigs'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
+import Pay from './pages/pay/Pay'
+import Success from './pages/success/Success'
+
 import './App.scss'
 
 import {
@@ -92,6 +95,14 @@ function App() {
         {
           path: '/orders',
           element: <Orders />
+        },
+        {
+          path: '/pay/:id',
+          element: <Pay />
+        },
+        {
+          path: '/success',
+          element: <Success />
         }
       ]
     }

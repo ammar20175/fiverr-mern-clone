@@ -4,5 +4,6 @@ dotenv.config();
 export const {
     PORT,
     MONGO_URL,
-    JWT_KEY
+    JWT_KEY,
+    STRIPE
 } = process.env
