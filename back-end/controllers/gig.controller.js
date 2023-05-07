@@ -4,6 +4,7 @@ import createError from '../utils/createError'
 export const createGig = async (req, res, next) => {
 
     if (!req.isSeller) return next(createError(403, 'only sellers can create a gig'));
+  
 
     const newGig = new Gig({
         userId: req.userId,
@@ -21,8 +22,9 @@ export const createGig = async (req, res, next) => {
 
 export const deleteGig = async (req, res, next) => {
     try {
+        // console.log('hit')
         const gig = await Gig.findById(req.params.id);
-
+        
         if (gig.userId !== req.userId) return next(createError(403, 'You can delete only ur gig'));
 
         await Gig.findByIdAndDelete(req.params.id);
@@ -46,6 +48,7 @@ export const getGig = async (req, res, next) => {
 export const getGigs = async (req, res, next) => {
 
     const q = req.query;
+  
     const filters = {
         ...(q.userId && { userId: q.userId }),
         ...(q.cat && { cat: q.cat }),
@@ -54,6 +57,7 @@ export const getGigs = async (req, res, next) => {
         }),
         ...(q.search && { title: { $regex: q.search, $options: 'i' } })
     }
+
 
     try {
         const gigs = await Gig.find(filters).sort({ [q.sort]: -1 });

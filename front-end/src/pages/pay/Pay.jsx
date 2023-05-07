@@ -6,7 +6,7 @@ import newRequest from '../../utils/newRequest'
 import { useParams } from 'react-router-dom';
 import CheckoutForm from '../../components/checkoutForm/CheckoutForm';
 
-const stripePromise = loadStripe('your stripe public key');
+const stripePromise = loadStripe(' <your stripe public key> ');
 
 const Pay = () => {
 
