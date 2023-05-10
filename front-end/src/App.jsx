@@ -19,10 +19,8 @@ import './App.scss'
 import {
   QueryClient,
   QueryClientProvider,
-  useQuery
 } from '@tanstack/react-query'
 
-import { useEffect } from 'react'
 import {
   createBrowserRouter,
   Outlet,
